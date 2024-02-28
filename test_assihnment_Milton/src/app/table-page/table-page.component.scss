@@ -1,0 +1,40 @@
+.table-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.table-header {
+  min-height: 10px;
+  padding: 8px 20px 15px;
+}
+
+.btn-table{
+  background-color: rgb(1, 78, 172);
+  color: #ffffff;
+  border-radius: 4px;
+  height: 25px;
+  width: 50px;
+}
+
+
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+mat-header-row{
+  background: #EFEFEF;
+
+}
+
+mat-header-cell.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-cell, .mat-header-cell {
+  padding: 4px; // Adjust the padding as per your preference
+  margin: 0;    // Remove any default margin
+}
+

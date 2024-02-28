@@ -1,0 +1,42 @@
+
+<div class="container">
+<div class="table-container">
+  <div class="table-header">
+    <button class="btn-table" (click)="backToMainPage()">Back</button>
+  </div>
+
+    <mat-table [dataSource]="dataSource" matSort matPaginator>
+  
+      <ng-container matColumnDef="created_at">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Created On </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.created_at}} </mat-cell>
+      </ng-container>
+  
+      
+      <ng-container matColumnDef="updated_at">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Updated On </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.updated_at}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="title">
+        <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
+      </ng-container>
+
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
+    </mat-table>
+
+     <mat-paginator
+    [pageSize]="100"
+    [length]="1000"
+  [pageSizeOptions]="[5, 10, 20,100]"
+  [pageIndex]="page - 1"
+  (page)="onPageChange($event)"></mat-paginator>
+  
+    
+  </div>
+</div>
+  

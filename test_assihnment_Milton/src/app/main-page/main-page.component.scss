@@ -1,0 +1,21 @@
+.container {
+     height: 500px;
+    position: relative;
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.main-btn{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(1, 78, 172);
+    color: #ffffff;
+    border-radius: 10px;
+
+}
